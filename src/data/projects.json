@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Preorder Perks",
+    "summary": "React + Firebase marketplace for book preorder bonuses.",
+    "image": "./assets/preorderperksScreenshot.png",
+    "link": "https://preorderperks.com",
+    "tags": ["React", "Firebase", "UI"]
+  },
+  {
+    "title": "Molecule Hub",
+    "summary": "Pharma molecules & trials portal with JSON-driven content. Built to be displayed at conferences & trade show events.",
+    "image": "https://images.unsplash.com/photo-1581594693700-89e55f70099b?q=80&w=1200&auto=format&fit=crop",
+    "link": "#",
+    "tags": ["React", "UX", "Data"]
+  },
+  {
+    "title": "LeadKey AI",
+    "summary": "AI services & agents for lead capture and follow-up.",
+    "image": "./assets/leadkeyScreenshot.png",
+    "link": "https://getleadkey.com",
+    "tags": ["AI", "Automation", "React"]
+  },
+  {
+    "title": "Dentistry On Purpose",
+    "summary": "This site is for informational purposes so potential clients can learn all about the services Dentistry on Purpose provides. This site is mostly HTML5 and JavaScript. There is some PHP sprinkled throughout to help make some forms work, as well as handle the login component.",
+    "image": "./assets/dopScreenshot.png",
+    "link": "https://www.dentistryonpurpose.com",
+    "tags": ["HTML", "CSS", "PHP", "JavaScript", "Bootstrap"]
+  },
+  {
+    "title": "TEC K9 Rubber Tracks",
+    "summary": "Former Ecommerce site for Tractor & Equipment Company. Built to help sell rubber tracks and parts online for construction and agricultural equipment.",
+    "image": "./assets/k9Screenshot.png",
+    "link": "#",
+    "tags": ["ecommerce", "HTML/CSS", "JavaScript", "Stripe Integration", "PHP"]
+  },
+  {
+    "title": "Atlantic Bay Mortgage Group",
+    "summary": "Mortgage Calculators for the ABMG website. As well as individulat Mortgage Banker's websites.",
+    "image": "./assets/abmgScreenshot.png",
+    "link": "https://atlanticbat.com",
+    "tags": ["JavaScript", "PHP", "Wordpress", "Bootstrap", "HTML", "CSS"]
+  },
+  {
+    "title": "Super Forecaster",
+    "summary": "Price Prediction Market game where users can try to predict the floor price of Solana NFTs",
+    "image": "./assets/superforecasterScreenshot.png",
+    "link": "#",
+    "tags": ["UI", "React", "TypeScript", "UX"]
+  },
+  {
+    "title": "Money DAO",
+    "summary": "Website for the MoneyDAO. A Solana Chain based DAO within the Solana MoneyBoys NFT ecosystem to empower holders to join, vote, and build.",
+    "image": "./assets/moneydao-1.png",
+    "link": "#",
+    "tags": ["React", "Next.js", "Typescript", "TailwindCSS", "UI", "UX"]
+  },
+  {
+    "title": "Larissa De Michael",
+    "summary": "Squarespace site for Larissa De Michael. I handled all design and implementation of the site for Larissa.",
+    "image": "./assets/ldmScreenshot.png",
+    "link": "https://getleadkey.com",
+    "tags": ["Squarespace", "UI", "UX"]
+  }
+]

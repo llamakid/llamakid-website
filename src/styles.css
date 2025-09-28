@@ -1,0 +1,99 @@
+:root {
+  --bg: #ffffff;
+  --fg: #0b0b0b;
+  --muted: #666;
+  --card: #f6f7f9;
+  --border: #e7e9ee;
+  --brand: #0f62fe; /* subtle blue */
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg); color: var(--fg);
+}
+
+.container { width: min(1100px, 92vw); margin: 0 auto; padding: 96px 0; }
+
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.7);
+}
+.nav .logo { font-weight: 700; text-decoration: none; color: var(--fg); letter-spacing: 0.5px; }
+.nav nav a {
+  margin-left: 18px; text-decoration: none; color: var(--fg);
+  padding: 6px 10px; border-radius: 10px;
+}
+.nav nav a:hover { background: var(--card); }
+
+.section { padding: 64px 0; }
+.section h2 {
+  font-size: 28px; line-height: 1.2; margin: 0 0 16px 0;
+}
+.section p { color: var(--muted); max-width: 70ch; }
+
+.grid {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  margin-top: 22px;
+}
+
+.card {
+  display: flex; flex-direction: column; text-decoration: none; color: inherit;
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+  transition: transform .1s ease, box-shadow .1s ease;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+.thumb {
+  background-size: cover; background-position: center; aspect-ratio: 16/9; border-bottom: 1px solid var(--border);
+}
+.card-body { padding: 14px; display: grid; gap: 8px; }
+.card-body h3 { margin: 0; font-size: 18px; }
+.card-body p { margin: 0; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: #eef2ff; color: #334155; }
+
+.contact ul { list-style: none; padding: 0; margin: 12px 0 0 0; display: flex; gap: 16px; }
+.contact a { color: var(--brand); text-decoration: none; }
+.contact a:hover { text-decoration: underline; }
+
+.footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); }
+
+
+.about-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 22px;
+  align-items: start;
+  margin-top: 8px;
+}
+
+.about-text p { margin: 0; }
+
+.about-photo {
+  justify-self: end; 
+  margin: 0;
+}
+
+.about-avatar {
+  display: block;
+  width: 320px;
+  aspect-ratio: 1 / 1;      
+  border-radius: 9999px;    
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  object-fit: cover;
+  object-position: center 20%; 
+}
+
+@media (max-width: 820px) {
+  .about-wrap {
+    grid-template-columns: 1fr;
+  }
+  .about-photo { justify-self: start; }
+  .about-avatar { width: 220px; } 
+}
