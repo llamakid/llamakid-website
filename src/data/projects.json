@@ -9,7 +9,7 @@
   {
     "title": "Molecule Hub",
     "summary": "Pharma molecules & trials portal with JSON-driven content. Built to be displayed at conferences & trade show events.",
-    "image": "https://images.unsplash.com/photo-1581594693700-89e55f70099b?q=80&w=1200&auto=format&fit=crop",
+    "image": "./assets/mhubScreenshot.png",
     "link": "#",
     "tags": ["React", "UX", "Data"]
   },
