@@ -58,12 +58,7 @@ export default function App() {
           <div className="about-wrap">
             <div className="about-text">
               <p>
-                I’m Nate Guy—developer & designer with 14+ years in web and iOS.
-                I build scalable, design-driven web & iOS applications for pharma,
-                healthcare, and publishing. Currently at BigTinCan (AI-driven Sales
-                Enablement) building React + Veeva CRM/Vault solutions. Previously:
-                GE (WWDC keynote), NFL, Sesame Street, Genentech. I build clean,
-                performant interfaces and automation with React, JS, and AI.
+                Hi, I’m Nate Guy—a developer passionate about turning complex ideas into intuitive digital experiences. Over the last 14+ years, I’ve built web and iOS products for pharma, healthcare, and publishing leaders, from GE’s WWDC-featured app to interactive content for the NFL and Sesame Street. Recently at BigTinCan, I crafted AI-powered React + Veeva CRM/Vault solutions, blending clean design and automation to help teams move and sell faster.
               </p>
             </div>
 
