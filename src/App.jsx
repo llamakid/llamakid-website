@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import Home from './pages/Home'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/privacy/:slug" element={<PrivacyPolicy />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   )
 }
