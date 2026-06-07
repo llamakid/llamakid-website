@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-do
 import { Analytics } from '@vercel/analytics/react'
 import Home from './pages/Home'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 
 const Nav = () => {
   const location = useLocation()
@@ -16,6 +18,7 @@ const Nav = () => {
           <a href="#about">About</a>
           <a href="#work">Work</a>
           <a href="#contact">Contact</a>
+          <Link to="/blog">Blog</Link>
         </nav>
       )}
     </header>
@@ -47,6 +50,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy/:slug" element={<PrivacyPolicy />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
       <Analytics />
     </BrowserRouter>
