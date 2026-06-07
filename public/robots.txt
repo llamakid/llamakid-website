@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://llamakid.com/sitemap.xml

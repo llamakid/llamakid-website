@@ -22,7 +22,7 @@
   },
   {
     "title": "Dentistry On Purpose",
-    "summary": "This site is for informational purposes so potential clients can learn all about the services Dentistry on Purpose provides. This site is mostly HTML5 and JavaScript. There is some PHP sprinkled throughout to help make some forms work, as well as handle the login component.",
+    "summary": "Informational site for a dental practice, including service pages, contact forms, and a login component.",
     "image": "./assets/dopScreenshot.png",
     "link": "https://www.dentistryonpurpose.com",
     "tags": ["HTML", "CSS", "PHP", "JavaScript", "Bootstrap"]
@@ -59,7 +59,7 @@
     "title": "Larissa De Michael",
     "summary": "Squarespace site for Larissa De Michael. I handled all design and implementation of the site for Larissa.",
     "image": "./assets/ldmScreenshot.png",
-    "link": "https://getleadkey.com",
+    "link": "#",
     "tags": ["Squarespace", "UI", "UX"]
   }
 ]
