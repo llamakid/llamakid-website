@@ -1,5 +1,21 @@
 [
   {
+    "title": "Clearly, AI",
+    "summary": "A school for everyday people who actually want to use AI. No jargon, no tech background, no overwhelm. Practical lessons plus custom AI tools that do it for you.",
+    "image": "./assets/clearlyAIScreenshot.png",
+    "link": "https://learnaiclearly.com",
+    "tags": ["AI", "Education", "Product"],
+    "year": 2025
+  },
+  {
+    "title": "Clearly: Explain This",
+    "summary": "Custom GPT that turns confusing information into clear, plain-English explanations without jargon, assumptions, or judgment.",
+    "image": "./assets/clearlyExplainThisScreenshot.png",
+    "link": "https://chatgpt.com/g/g-6a25ce026df08191ad2ae0fedd361400-clearly-explain-this",
+    "tags": ["AI", "GPT", "ChatGPT"],
+    "year": 2025
+  },
+  {
     "title": "Preorder Perks",
     "summary": "React + Firebase marketplace for book preorder bonuses.",
     "image": "./assets/preorderperksScreenshot.png",
@@ -40,26 +56,6 @@
     "image": "./assets/abmgScreenshot.png",
     "link": "https://atlanticbat.com",
     "tags": ["JavaScript", "PHP", "Wordpress", "Bootstrap", "HTML", "CSS"]
-  },
-  {
-    "title": "Super Forecaster",
-    "summary": "Price Prediction Market game where users can try to predict the floor price of Solana NFTs",
-    "image": "./assets/superforecasterScreenshot.png",
-    "link": "#",
-    "tags": ["UI", "React", "TypeScript", "UX"]
-  },
-  {
-    "title": "Money DAO",
-    "summary": "Website for the MoneyDAO. A Solana Chain based DAO within the Solana MoneyBoys NFT ecosystem to empower holders to join, vote, and build.",
-    "image": "./assets/moneydao-1.png",
-    "link": "#",
-    "tags": ["React", "Next.js", "Typescript", "TailwindCSS", "UI", "UX"]
-  },
-  {
-    "title": "Larissa De Michael",
-    "summary": "Squarespace site for Larissa De Michael. I handled all design and implementation of the site for Larissa.",
-    "image": "./assets/ldmScreenshot.png",
-    "link": "#",
-    "tags": ["Squarespace", "UI", "UX"]
   }
+   
 ]
