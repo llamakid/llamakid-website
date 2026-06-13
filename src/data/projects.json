@@ -1,13 +1,5 @@
 [
   {
-    "title": "XO Fun - Tic Tac Toe",
-    "summary": "A clean, fast, family-friendly iOS take on classic Tic Tac Toe. Built with SwiftUI, live on the App Store.",
-    "image": "./assets/mid-game.png",
-    "link": "/apps/xo-fun",
-    "tags": ["iOS", "SwiftUI", "Game"],
-    "year": 2026
-  },
-  {
     "title": "Clearly, AI",
     "summary": "A school for everyday people who actually want to use AI. No jargon, no tech background, no overwhelm. Practical lessons plus custom AI tools that do it for you.",
     "image": "./assets/clearlyAIScreenshot.png",
@@ -22,6 +14,14 @@
     "link": "https://chatgpt.com/g/g-6a25ce026df08191ad2ae0fedd361400-clearly-explain-this",
     "tags": ["AI", "GPT", "ChatGPT"],
     "year": 2025
+  },
+  {
+    "title": "XO Fun - Tic Tac Toe",
+    "summary": "A clean, fast, family-friendly iOS take on classic Tic Tac Toe. Built with SwiftUI, live on the App Store.",
+    "image": "./assets/mid-game.png",
+    "link": "/apps/xo-fun",
+    "tags": ["iOS", "SwiftUI", "Game"],
+    "year": 2026
   },
   {
     "title": "Preorder Perks",
