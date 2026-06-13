@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "xo-fun",
+    "name": "XO Fun",
+    "subtitle": "Tic Tac Toe",
+    "tagline": "A clean, fast, friendly take on the classic game of Tic Tac Toe — quick to pick up, fun for every age.",
+    "year": 2026,
+    "appStoreUrl": "https://apps.apple.com/us/app/xo-fun-tic-tac-toe/id6777161553",
+    "icon": "/assets/AppIcon_1024.png",
+    "screenshots": [
+      "/assets/empty_board.png",
+      "/assets/mid-game.png",
+      "/assets/alex_wins.png",
+      "/assets/player_names.png",
+      "/assets/steve_turn_empty.png"
+    ],
+    "description": [
+      "XO Fun is a simple, polished version of the game everyone already knows. Tap to play, race a friend, and start a new round in a single tap — no sign-ups, no clutter, just the game.",
+      "Built to be family-friendly and safe for kids: it's free, easy to use, and designed with children's privacy in mind."
+    ],
+    "features": [
+      "Fast, tap-to-play classic Tic Tac Toe",
+      "Clean, distraction-free design",
+      "Free to download and play",
+      "Kid-friendly and COPPA-compliant"
+    ],
+    "privacySlug": "xo-fun-app"
+  }
+]

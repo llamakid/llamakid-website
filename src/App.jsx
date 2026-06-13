@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-do
 import { Analytics } from '@vercel/analytics/react'
 import Home from './pages/Home'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import AppPage from './pages/AppPage'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 
@@ -50,6 +51,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy/:slug" element={<PrivacyPolicy />} />
+        <Route path="/apps/:slug" element={<AppPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>

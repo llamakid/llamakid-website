@@ -1,14 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import projects from '../data/projects.json'
 
-const ProjectCard = ({ p }) => (
-  <a
-    className="card"
-    href={p.link && p.link !== '#' ? p.link : undefined}
-    target={p.link && p.link !== '#' ? '_blank' : undefined}
-    rel="noreferrer"
-    style={!p.link || p.link === '#' ? { cursor: 'default', pointerEvents: 'none' } : {}}
-  >
+const CardInner = ({ p }) => (
+  <>
     <div className="thumb" style={{ backgroundImage: p.image ? `url(${p.image})` : 'none' }} />
     <div className="card-body">
       <div className="card-header-row">
@@ -20,8 +15,29 @@ const ProjectCard = ({ p }) => (
         {p.tags?.map(t => <span key={t} className="tag">{t}</span>)}
       </div>
     </div>
-  </a>
+  </>
 )
+
+const ProjectCard = ({ p }) => {
+  const hasLink = p.link && p.link !== '#'
+  const isInternal = hasLink && p.link.startsWith('/')
+
+  if (isInternal) {
+    return <Link className="card" to={p.link}><CardInner p={p} /></Link>
+  }
+
+  return (
+    <a
+      className="card"
+      href={hasLink ? p.link : undefined}
+      target={hasLink ? '_blank' : undefined}
+      rel="noreferrer"
+      style={!hasLink ? { cursor: 'default', pointerEvents: 'none' } : {}}
+    >
+      <CardInner p={p} />
+    </a>
+  )
+}
 
 export default function Home() {
   return (
