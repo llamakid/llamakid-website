@@ -25,5 +25,31 @@
       "Kid-friendly and COPPA-compliant"
     ],
     "privacySlug": "xo-fun-app"
+  },
+  {
+    "slug": "hang-on",
+    "name": "Hang On!",
+    "subtitle": "Hangman",
+    "tagline": "A clean, fast, friendly take on the classic game of Hangman — quick to pick up, fun for every age.",
+    "year": 2026,
+    "appStoreUrl": "REPLACE_WITH_APP_STORE_URL",
+    "icon": "/assets/hangmanIcon.png",
+    "screenshots": [
+      "/assets/start_hangman.png",
+      "/assets/pickword_hangman.png",
+      "/assets/enterword_hangman.png",
+      "/assets/midgame_hangman.png"
+    ],
+    "description": [
+      "Hang On! is a simple, polished version of the word-guessing game everyone already knows. Pick a letter, save the day, and start a new round in a single tap — no sign-ups, no clutter, just the game.",
+      "Built to be family-friendly and safe for kids: it's free, easy to use, and designed with children's privacy in mind."
+    ],
+    "features": [
+      "Fast, tap-to-play classic Hangman",
+      "Clean, distraction-free design",
+      "Free to download and play",
+      "Kid-friendly and COPPA-compliant"
+    ],
+    "privacySlug": "hang-on-app"
   }
 ]

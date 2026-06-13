@@ -24,6 +24,14 @@
     "year": 2026
   },
   {
+    "title": "Hang On!",
+    "summary": "A clean, fast, family-friendly iOS take on classic Hangman. Built with SwiftUI, live on the App Store.",
+    "image": "./assets/hangmanIcon.png",
+    "link": "/apps/hang-on",
+    "tags": ["iOS", "SwiftUI", "Game"],
+    "year": 2026
+  },
+  {
     "title": "Preorder Perks",
     "summary": "React + Firebase marketplace for book preorder bonuses.",
     "image": "./assets/preorderperksScreenshot.png",

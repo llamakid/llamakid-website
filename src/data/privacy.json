@@ -72,5 +72,42 @@
         "body": "If you have any questions about this privacy policy, please contact us at itsnateguy@gmail.com."
       }
     ]
+  },
+  {
+    "slug": "hang-on-app",
+    "appName": "Hang On! App",
+    "lastUpdated": "2026-06-13",
+    "contactEmail": "itsnateguy@gmail.com",
+    "collectsData": false,
+    "sections": [
+      {
+        "heading": "Information We Collect",
+        "body": "This app collects the following information: Name, Email, Phone Number, and a message. This information is used to contact you to discuss the project. It is not used for any other purpose."
+      },
+      {
+        "heading": "How We Use Information",
+        "body": "Contact information you provide (name, email, phone number, and message) is used solely to respond to your inquiry. It is not sold, rented, or shared with third parties for marketing purposes."
+      },
+      {
+        "heading": "Third-Party Services",
+        "body": "Hang On! uses Google AdMob to display advertisements. AdMob may collect device identifiers and usage data to serve ads. Child-directed treatment is enabled under COPPA, which instructs Google to serve only non-personalized ads. For details, see Google's privacy policy at https://policies.google.com/privacy."
+      },
+      {
+        "heading": "Data Retention",
+        "body": "Contact information submitted through the app is retained only as long as necessary to respond to your inquiry and is then deleted."
+      },
+      {
+        "heading": "Children's Privacy",
+        "body": "Hang On! is designed for general audiences including children under 13. We do not knowingly collect personal information from children. The app is configured to comply with the Children's Online Privacy Protection Act (COPPA). For information on how Google handles data in child-directed contexts, please review Google's privacy policy at https://policies.google.com/privacy."
+      },
+      {
+        "heading": "Changes to This Policy",
+        "body": "We may update this policy from time to time. Any changes will be posted at this URL with an updated date."
+      },
+      {
+        "heading": "Contact Us",
+        "body": "If you have any questions about this privacy policy, please contact us at itsnateguy@gmail.com."
+      }
+    ]
   }
 ]
