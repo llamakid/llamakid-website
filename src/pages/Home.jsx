@@ -60,14 +60,10 @@ export default function Home() {
         <div className="about-wrap">
           <div className="about-text">
             <p>
-              I'm a developer passionate about turning complex ideas into intuitive digital
-              experiences. Over the last 14+ years, I've built web and iOS products for pharma,
-              healthcare, and publishing leaders — from GE's WWDC-featured app to interactive
-              content for the NFL and Sesame Street.
-            </p>
-            <p style={{ marginTop: '16px' }}>
-              Most recently at BigTinCan, I crafted AI-powered React + Veeva CRM/Vault solutions,
-              blending clean design and automation to help teams move and sell faster.
+              I build web apps, enterprise platforms, and AI-powered tools — with a focus on making
+              technology feel simple and human. Currently working at a web agency, shipping everything
+              from marketing sites to complex enterprise systems, with a growing focus on AI tools and
+              workflows.
             </p>
           </div>
           <figure className="about-photo">
