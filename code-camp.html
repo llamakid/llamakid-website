@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presenter Script — Slides 7–14</title>
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --muted: #5a5a6e;
+    --accent: #4f46e5;
+    --accent-soft: #eef0ff;
+    --line: #e3e3ee;
+    --star: #d9480f;
+    --stage: #0b7a4b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    line-height: 1.6;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+    background: #fafafc;
+  }
+  header h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  .subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 8px; }
+  .callout {
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0 28px;
+    font-size: 0.95rem;
+  }
+  .callout strong { color: var(--accent); }
+  .mantra { font-weight: 700; letter-spacing: 1px; color: var(--accent); }
+  .slide {
+    background: #fff;
+    border-radius: 10px;
+    padding: 4px 24px 20px;
+    margin: 0 0 22px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--accent);
+  }
+  .slide.demo { border-top-color: var(--star); }
+  .slide-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 16px 0 6px;
+  }
+  .badge {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .slide.demo .badge { background: var(--star); }
+  .slide-title { font-size: 1.2rem; font-weight: 700; margin: 0; }
+  .time {
+    margin-left: auto;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .say {
+    font-size: 1.05rem;
+    margin: 10px 0;
+  }
+  .say p { margin: 10px 0; }
+  .stage {
+    background: #eefaf3;
+    border-left: 4px solid var(--stage);
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-size: 0.93rem;
+    color: #134e35;
+  }
+  .stage strong { color: var(--stage); }
+  .stage ol { margin: 6px 0; padding-left: 22px; }
+  .note {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 8px 0 0;
+  }
+  code {
+    background: #f0f0f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.88em;
+  }
+  @media print {
+    body { background: #fff; padding: 0; max-width: none; }
+    .slide { box-shadow: none; border: 1px solid var(--line); page-break-inside: avoid; }
+    .callout, .stage, .badge, .slide { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Presenter Script — Slides 7–14</h1>
+  <div class="subtitle">Background: JavaScript · ~9 minutes · read naturally, don't rush</div>
+</header>
+
+<div class="callout">
+  <strong>Tone:</strong> talking to kids — warm, a little playful, lots of eye contact. The <span class="mantra">WHEN · DO · CHANGE</span> mantra and the demo on slide 14 are your anchors. Text below is a guide — say it in your own words.
+</div>
+
+<!-- 7 -->
+<div class="slide">
+  <div class="slide-head">
+    <span class="badge">Slide 7</span>
+    <h2 class="slide-title">Background: JavaScript</h2>
+    <span class="time">0:10</span>
+  </div>
+  <div class="say">
+    <p>"Alright — yesterday we built the <em>look</em> of a web page with HTML and CSS. Today, we make it come alive. So let's talk about the language that does that: JavaScript."</p>
+  </div>
+  <p class="note">This is just a title slide — keep moving.</p>
+</div>
+
+<!-- 8 -->
+<div class="slide">
+  <div class="slide-head">
+    <span class="badge">Slide 8</span>
+    <h2 class="slide-title">What is JavaScript?</h2>
+    <span class="time">1:00</span>
+  </div>
+  <div class="say">
+    <p>"Here's the easiest way to think about a web page. Imagine it's like a person.</p>
+    <p>HTML is the <strong>bones</strong> — the skeleton that holds everything up. CSS is the <strong>clothes and the style</strong> — how it looks. And JavaScript? JavaScript is the <strong>brain and the muscles</strong> — it's what lets the page actually <em>do</em> things and react to you.</p>
+    <p>So every time you click a button and something happens, or you type and a page responds — that's JavaScript working. It's a coding language, and it's how we give the page its instructions."</p>
+  </div>
+  <div class="stage">
+    <strong>🙋 Ask the room:</strong> "Can anyone think of something on a website or app that <em>reacts</em> when you click or type?" (Take one or two answers — likes, menus, games. Then move on.)
+  </div>
+</div>
+
+<!-- 9 -->
+<div class="slide">
+  <div class="slide-head">
+    <span class="badge">Slide 9</span>
+    <h2 class="slide-title">History</h2>
+    <span class="time">1:00</span>
+  </div>
+  <div class="say">
+    <p>"A little history. JavaScript was invented in <strong>1995</strong>, at a company called Netscape. The whole idea was to let regular people — not just expert programmers — build websites that were interactive and fun, instead of just words sitting on a screen.</p>
+    <p>And here's a fun fact, because you're going to hear this word all day: <strong>'bug.'</strong> A bug is a mistake in your code. So why do we call it a bug? Way back when computers were the size of an entire <em>room</em>, real insects — actual bugs — would crawl inside and break them. Engineers literally had to pull bugs out to fix the computer. And the name just… stuck. So today, when your code breaks, we say you've got a bug."</p>
+  </div>
+  <p class="note">The bug story is a crowd-pleaser — slow down and enjoy telling it.</p>
+</div>
+
+<!-- 10 -->
+<div class="slide">
+  <div class="slide-head">
+    <span class="badge">Slide 10</span>
+    <h2 class="slide-title">JS Then vs Now</h2>
+    <span class="time">0:45</span>
+  </div>
+  <div class="say">
+    <p>"When JavaScript first came out, people honestly weren't totally sure what to do with it. But fast-forward to today, and it is <em>everywhere</em> — websites, apps, phone games, even the game we're about to build.</p>
+    <p>And over the years, developers built tons of helpful tools on top of it — you might hear names like React or Next. You don't need to know those today; just know it's the same language from 1995, but now there's a huge community of people all helping each other build cool stuff."</p>
+  </div>
+  <p class="note">Keep this one light and quick — the framework names are just for flavor.</p>
+</div>
+
+<!-- 11 -->
+<div class="slide">
+  <div class="slide-head">
+    <span class="badge">Slide 11</span>
+    <h2 class="slide-title">Get to Know the Dev Environment</h2>
+    <span class="time">1:15</span>
+  </div>
+  <div class="say">
+    <p>"Every developer has a toolbox built right into the web browser. The most important tool is the <strong>console</strong>. Think of it like a notepad where you can test out little bits of code — and it's also where the computer tells you when something went wrong. Errors and warnings show up right there.</p>
+    <p>A couple of shortcuts the pros use constantly:</p>
+    <p><code>Cmd</code> or <code>Ctrl</code> + <code>F</code> to <strong>find</strong> something on the page, and <code>Cmd</code> or <code>Ctrl</code> + <code>D</code> to <strong>select the next</strong> matching word.</p>
+    <p>And there's a button called <strong>'Inspect'</strong> that lets you peek behind the curtain of <em>any</em> website to see the code that built it."</p>
+  </div>
+  <div class="stage">
+    <strong>🖱️ Optional live moment:</strong> Right-click any website → <em>Inspect</em>. Show them the real HTML/CSS/JS for 5 seconds. Seeing the "secret code" behind a real site is a great wow moment.
+  </div>
+</div>
+
+<!-- 12 -->
+<div class="slide">
+  <div class="slide-head">
+    <span class="badge">Slide 12</span>
+    <h2 class="slide-title">Let's Reopen the Codebase We Started</h2>
+    <span class="time">1:00</span>
+  </div>
+  <div class="say">
+    <p>"Let's pull up the project we started earlier. Quick recap: HTML puts things on the page, CSS makes them look good, and JavaScript makes them react.</p>
+    <p>Now here's a little trick to remember what JavaScript actually does. Three words: <span class="mantra">WHEN, DO, CHANGE.</span> <strong>WHEN</strong> something happens — like you click a button — <strong>DO</strong> some code, and then <strong>CHANGE</strong> what's on the screen. Say it with me — when, do, change. That's basically every piece of JavaScript you'll write today."</p>
+  </div>
+  <p class="note">Get them to repeat "when, do, change" out loud — it's the mental model for the whole day.</p>
+</div>
+
+<!-- 13 -->
+<div class="slide">
+  <div class="slide-head">
+    <span class="badge">Slide 13</span>
+    <h2 class="slide-title">How Do You Add JavaScript to a Webpage?</h2>
+    <span class="time">0:45</span>
+  </div>
+  <div class="say">
+    <p>"So how does JavaScript actually get onto the page? It's a lot like how we added CSS yesterday — we link to the file. For JavaScript, we use a special tag called the <strong>script tag</strong>.</p>
+    <p>It looks like this —" <span style="white-space:nowrap;">(point at the slide)</span> "<code>&lt;script src="index.js" /&gt;</code>. That one little line tells the HTML, 'Hey — go grab my JavaScript file and run it.' Without it, the page has no brain. It just sits there."</p>
+  </div>
+</div>
+
+<!-- 14 -->
+<div class="slide demo">
+  <div class="slide-head">
+    <span class="badge">Slide 14 ⭐</span>
+    <h2 class="slide-title">JS Off vs JS On (DEMO)</h2>
+    <span class="time">2:00</span>
+  </div>
+  <div class="say">
+    <p>"Okay — let me <em>show</em> you why JavaScript matters. This is a game called <strong>Cereal Catcher.</strong>"</p>
+  </div>
+  <div class="stage">
+    <strong>Run the demo in this exact order:</strong>
+    <ol>
+      <li>Open <code>cereal-catcher.html</code> with <strong>JavaScript turned OFF.</strong></li>
+      <li>Click <strong>Start</strong> → nothing happens. <em>Pause. Let it be awkward.</em></li>
+      <li>Turn <strong>JavaScript ON</strong>, reload, click Start → the game plays!</li>
+    </ol>
+  </div>
+  <div class="say">
+    <p>(While clicking Start with JS off:) "Hmm… I'm clicking Start. And… nothing's happening. Weird, right? The button's right there."</p>
+    <p>(After turning JS on and it works:) "Now watch — I turn JavaScript on, reload, click Start… and there it goes!</p>
+    <p>Here's the key thing: it was the <em>same</em> HTML and the <em>same</em> CSS the whole time. Nothing about the look changed. The only thing missing before was the <strong>logic</strong> — the JavaScript. That's the brain we talked about. And that, right there, is exactly what you're all going to write next."</p>
+  </div>
+  <p class="note">This is your finale — end with energy, then hand off to the building-blocks section (slide 15).</p>
+</div>
+
+</body>
+</html>
