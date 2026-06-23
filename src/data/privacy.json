@@ -109,5 +109,42 @@
         "body": "If you have any questions about this privacy policy, please contact us at itsnateguy@gmail.com."
       }
     ]
+  },
+  {
+    "slug": "burnwatch",
+    "appName": "BurnWatch",
+    "lastUpdated": "2026-06-23",
+    "contactEmail": "itsnateguy@gmail.com",
+    "collectsData": false,
+    "sections": [
+      {
+        "heading": "Information We Collect",
+        "body": "BurnWatch does not collect any personal information. The app runs entirely on your device and makes no network requests. No account, login, or personal details are required to use the app."
+      },
+      {
+        "heading": "How We Use Information",
+        "body": "Since BurnWatch does not collect any information, there is no data to use or share."
+      },
+      {
+        "heading": "Third-Party Services",
+        "body": "BurnWatch does not integrate any third-party SDKs, analytics, advertising, or tracking services. All functionality runs locally on your Mac."
+      },
+      {
+        "heading": "Data Retention",
+        "body": "No user data is collected or stored on any server. Any preferences you configure in the app (such as display settings) are stored only on your local device using macOS system APIs and are never transmitted."
+      },
+      {
+        "heading": "Children's Privacy",
+        "body": "BurnWatch does not knowingly collect personal information from anyone, including children under 13."
+      },
+      {
+        "heading": "Changes to This Policy",
+        "body": "We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date."
+      },
+      {
+        "heading": "Contact Us",
+        "body": "If you have any questions about this privacy policy, please contact us at itsnateguy@gmail.com."
+      }
+    ]
   }
 ]
