@@ -146,5 +146,79 @@
         "body": "If you have any questions about this privacy policy, please contact us at itsnateguy@gmail.com."
       }
     ]
+  },
+  {
+    "slug": "brushy",
+    "appName": "Brushy",
+    "lastUpdated": "2026-07-03",
+    "contactEmail": "itsnateguy@gmail.com",
+    "collectsData": false,
+    "sections": [
+      {
+        "heading": "Information We Collect",
+        "body": "Brushy is a sticker pack for iMessage and does not collect any personal information. No account, login, or personal details are required to use the stickers."
+      },
+      {
+        "heading": "How We Use Information",
+        "body": "Since Brushy does not collect any information, there is no data to use or share."
+      },
+      {
+        "heading": "Third-Party Services",
+        "body": "Brushy does not integrate any third-party SDKs, analytics, advertising, or tracking services. The sticker pack runs entirely within iMessage on your device and makes no network requests."
+      },
+      {
+        "heading": "Data Retention",
+        "body": "No user data is collected or stored on any server. Stickers you send are handled by Apple's iMessage service according to Apple's own privacy policy."
+      },
+      {
+        "heading": "Children's Privacy",
+        "body": "Brushy does not knowingly collect personal information from anyone, including children under 13."
+      },
+      {
+        "heading": "Changes to This Policy",
+        "body": "We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date."
+      },
+      {
+        "heading": "Contact Us",
+        "body": "If you have any questions about this privacy policy, please contact us at itsnateguy@gmail.com."
+      }
+    ]
+  },
+  {
+    "slug": "connect-four-game",
+    "appName": "Untitled Connect Four Game",
+    "lastUpdated": "2026-07-03",
+    "contactEmail": "itsnateguy@gmail.com",
+    "collectsData": false,
+    "sections": [
+      {
+        "heading": "Information We Collect",
+        "body": "This app does not collect any personal information. No account, login, or personal details are required to play."
+      },
+      {
+        "heading": "How We Use Information",
+        "body": "Since this app does not collect any information, there is no data to use or share."
+      },
+      {
+        "heading": "Third-Party Services",
+        "body": "This app does not integrate any third-party analytics, advertising, or tracking services. All gameplay runs locally on your device."
+      },
+      {
+        "heading": "Data Retention",
+        "body": "No user data is collected or stored on any server. Any game progress or settings are stored only on your local device and are never transmitted."
+      },
+      {
+        "heading": "Children's Privacy",
+        "body": "This app is designed for general audiences and does not knowingly collect personal information from anyone, including children under 13."
+      },
+      {
+        "heading": "Changes to This Policy",
+        "body": "We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date."
+      },
+      {
+        "heading": "Contact Us",
+        "body": "If you have any questions about this privacy policy, please contact us at itsnateguy@gmail.com."
+      }
+    ]
   }
 ]
