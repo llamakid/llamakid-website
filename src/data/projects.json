@@ -40,6 +40,14 @@
     "year": 2026
   },
   {
+    "title": "BurnWatch",
+    "summary": "A native macOS menubar app that shows developers exactly how fast they're burning tokens across Claude Code and Codex, reading local transcripts with zero network requests.",
+    "image": "/assets/burnwatchIcon.png",
+    "link": "/apps/burnwatch",
+    "tags": ["macOS", "Swift", "Menubar App"],
+    "year": 2026
+  },
+  {
     "title": "Preorder Perks",
     "summary": "React + Firebase marketplace for book preorder bonuses.",
     "image": "./assets/preorderperksScreenshot.png",

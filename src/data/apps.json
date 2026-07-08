@@ -78,5 +78,38 @@
       "Free to download and play"
     ],
     "privacySlug": "four-up-duel"
+  },
+  {
+    "slug": "burnwatch",
+    "name": "BurnWatch",
+    "subtitle": "Menubar App",
+    "tagline": "Every AI turn burns tokens. BurnWatch shows you exactly how fast.",
+    "year": 2026,
+    "appStoreUrl": "REPLACE_WITH_DOWNLOAD_URL",
+    "icon": "/assets/burnwatchIcon.png",
+    "screenshots": [
+      "/assets/all_burnwatch.png",
+      "/assets/claude_burnwatch.png",
+      "/assets/codex_burnwatch.png"
+    ],
+    "description": [
+      "A native macOS menubar app for developers using Claude Code or Codex (OpenAI). No account, no sign-in — BurnWatch reads your local transcript files directly and surfaces the numbers that matter.",
+      "BurnWatch reads live rate limit data straight from Claude Code — accurate to within 1% of what the /usage endpoint reports. Codex rate limits come directly from OpenAI's session files. No guessing, no polling.",
+      "Track Claude Code and Codex side by side, switch views with a tap. Cost calculations appear where pricing is available; Codex shows token counts and rate limits.",
+      "Set an optional dollar limit for your 5-hour window, today, or the week — BurnWatch shows a progress bar toward each cap and sends a notification when you're getting close.",
+      "BurnWatch makes zero network requests. It reads two folders on your Mac — ~/.claude and ~/.codex — and nothing else. Your data never leaves your machine.",
+      "Launch BurnWatch, grant folder access once, and live stats appear immediately. A lightweight shell script is automatically installed to capture Claude rate limit data from each turn.",
+      "Requires macOS 13 Ventura or later. Claude Code and/or Codex must be installed separately."
+    ],
+    "features": [
+      "Today's spend and all-time cost at a glance",
+      "5-hour and weekly rate limit progress",
+      "Context window status for your active session",
+      "Per-model token breakdown (Opus, Sonnet, Haiku)",
+      "Side-by-side tracking for Claude Code and Codex",
+      "Optional cost caps with near-limit notifications",
+      "Zero network requests — all data stays on your Mac"
+    ],
+    "privacySlug": "burnwatch"
   }
 ]
