@@ -32,6 +32,14 @@
     "year": 2026
   },
   {
+    "title": "Four Up Duel",
+    "summary": "A clean, fast, family-friendly iOS take on classic Connect Four. Play a friend or duel the AI. Built with SwiftUI.",
+    "image": "/assets/fourUpDuelIcon.png",
+    "link": "/apps/four-up-duel",
+    "tags": ["iOS", "SwiftUI", "Game"],
+    "year": 2026
+  },
+  {
     "title": "Preorder Perks",
     "summary": "React + Firebase marketplace for book preorder bonuses.",
     "image": "./assets/preorderperksScreenshot.png",
