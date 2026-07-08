@@ -185,39 +185,39 @@
     ]
   },
   {
-    "slug": "connect-four-game",
-    "appName": "Untitled Connect Four Game",
-    "lastUpdated": "2026-07-03",
+    "slug": "four-up-duel",
+    "appName": "Four Up Duel",
+    "lastUpdated": "2026-07-15",
     "contactEmail": "itsnateguy@gmail.com",
     "collectsData": false,
     "sections": [
       {
         "heading": "Information We Collect",
-        "body": "This app does not collect any personal information. No account, login, or personal details are required to play."
+        "body": "We do not collect any personal information. The App does not require you to create an account, sign in, or provide any personal details to play."
       },
       {
-        "heading": "How We Use Information",
-        "body": "Since this app does not collect any information, there is no data to use or share."
+        "heading": "Data Stored on Your Device",
+        "body": "The App keeps track of your game statistics (such as wins, losses, and games played) so you can see your progress over time. This information is stored locally on your device using Apple's standard local storage (UserDefaults) and never leaves your device. It is not synced to iCloud, sent to any server, or shared with any third party. You can clear this data at any time by resetting your statistics within the App or by deleting the App from your device."
+      },
+      {
+        "heading": "Advertising",
+        "body": "The App uses Google AdMob to display banner advertisements. Ads are requested as non-personalized only — the App does not show the App Tracking Transparency permission prompt and does not allow AdMob to track you across other companies' apps or websites. To serve ads, measure their performance, and protect against fraud, Google's Mobile Ads SDK may collect: a device identifier (used for ads, frequency capping, and fraud prevention); approximate (coarse) location, estimated from IP address; advertising interaction data (such as ads shown or clicked); and crash and performance diagnostics. This data is not linked to your identity and is not used to track you across other apps or websites. It is handled according to Google's Privacy Policy (https://policies.google.com/privacy) and How Google uses information from partner sites or apps (https://policies.google.com/technologies/partner-sites)."
       },
       {
         "heading": "Third-Party Services",
-        "body": "This app does not integrate any third-party analytics, advertising, or tracking services. All gameplay runs locally on your device."
-      },
-      {
-        "heading": "Data Retention",
-        "body": "No user data is collected or stored on any server. Any game progress or settings are stored only on your local device and are never transmitted."
+        "body": "The App integrates with Google AdMob to display advertising, as described above. It does not integrate with any other third-party services, analytics providers, or advertising networks."
       },
       {
         "heading": "Children's Privacy",
-        "body": "This app is designed for general audiences and does not knowingly collect personal information from anyone, including children under 13."
+        "body": "The App does not knowingly collect any personal information from anyone, including children under the age of 13. Advertising shown in the App is limited to non-personalized ads."
       },
       {
         "heading": "Changes to This Policy",
-        "body": "We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date."
+        "body": "If this Privacy Policy is updated, the revised version will be posted at this same location with an updated effective date."
       },
       {
         "heading": "Contact Us",
-        "body": "If you have any questions about this privacy policy, please contact us at itsnateguy@gmail.com."
+        "body": "If you have any questions about this Privacy Policy, please contact us at itsnateguy@gmail.com."
       }
     ]
   }
