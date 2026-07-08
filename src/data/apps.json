@@ -51,5 +51,32 @@
       "Kid-friendly and COPPA-compliant"
     ],
     "privacySlug": "hang-on-app"
+  },
+  {
+    "slug": "four-up-duel",
+    "name": "Four Up Duel",
+    "subtitle": "Connect Four",
+    "tagline": "A clean, fast, friendly take on the classic game of Connect Four — play a friend or duel the AI.",
+    "year": 2026,
+    "appStoreUrl": "REPLACE_WITH_APP_STORE_URL",
+    "icon": "/assets/fourUpDuelIcon.png",
+    "screenshots": [
+      "/assets/start_fourupduel.png",
+      "/assets/setup_fourupduel.png",
+      "/assets/difficulty_fourupduel.png",
+      "/assets/midgame_fourupduel.png",
+      "/assets/win_fourupduel.png"
+    ],
+    "description": [
+      "Four Up Duel is a simple, polished version of the classic drop-and-connect game everyone already knows. Name your players, pick a color, and start dropping pieces in a single tap — no sign-ups, no clutter, just the game.",
+      "Play head-to-head with a friend on the same device, or duel the AI across Easy, Medium, and Hard difficulty."
+    ],
+    "features": [
+      "Fast, tap-to-play classic Connect Four",
+      "2-player local mode or vs AI with adjustable difficulty",
+      "Clean, distraction-free design",
+      "Free to download and play"
+    ],
+    "privacySlug": "four-up-duel"
   }
 ]
