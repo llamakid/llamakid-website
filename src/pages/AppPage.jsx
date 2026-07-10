@@ -70,6 +70,12 @@ export default function AppPage() {
           </p>
         </div>
       )}
+
+      <div className="app-section">
+        <p className="app-support-line">
+          For any support needs, please email <a href="mailto:itsnateguy@gmail.com">itsnateguy@gmail.com</a>.
+        </p>
+      </div>
     </div>
   )
 }

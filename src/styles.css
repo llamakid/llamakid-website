@@ -540,6 +540,15 @@ body {
   text-decoration: underline;
 }
 
+.app-support-line a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.app-support-line a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 700px) {
   .app-hero {
     flex-direction: column;
