@@ -85,7 +85,7 @@
     "subtitle": "Menubar App",
     "tagline": "Every AI turn burns tokens. BurnWatch shows you exactly how fast.",
     "year": 2026,
-    "appStoreUrl": "REPLACE_WITH_DOWNLOAD_URL",
+    "appStoreUrl": "https://apps.apple.com/us/app/burnwatch/id6782740508?mt=12",
     "icon": "/assets/burnwatchIcon.png",
     "screenshots": [
       "/assets/all_burnwatch.png",
