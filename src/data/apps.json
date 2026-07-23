@@ -111,5 +111,34 @@
       "Zero network requests — all data stays on your Mac"
     ],
     "privacySlug": "burnwatch"
+  },
+  {
+    "slug": "daily-weave",
+    "name": "Daily Weave",
+    "subtitle": "Habit Tracker",
+    "tagline": "Build better days, one thread at a time. Track your habits and watch them weave into a tapestry of progress.",
+    "year": 2026,
+    "appStoreUrl": "REPLACE_WITH_APP_STORE_URL",
+    "icon": "/assets/dailyWeaveIcon.png",
+    "screenshots": [
+      "/assets/dailyWeave1.png",
+      "/assets/dailyWeave2.png",
+      "/assets/dailyWeave3.png",
+      "/assets/dailyWeave4.png",
+      "/assets/dailyWeave5.png"
+    ],
+    "description": [
+      "Daily Weave is a calm, focused habit tracker for iPhone and Apple Watch. Create habits, set your own schedules, check things off, and watch your consistency build over time — no sign-ups, no clutter, just the streak.",
+      "Your data is yours. Everything lives on your device by default, and Pro subscribers can sync privately through their own iCloud account and companion Apple Watch app. Daily Weave has no backend server and collects nothing.",
+      "See your progress as a \"tapestry\" in Stats — a visual weave of your completion history you can export and share."
+    ],
+    "features": [
+      "Track daily habits with flexible, custom schedules",
+      "Local reminders that keep you on track",
+      "Stats \"tapestry\" view of your progress, exportable as an image",
+      "Private iCloud sync and Apple Watch companion app (Pro)",
+      "No accounts, no ads, no tracking — your data never leaves your control"
+    ],
+    "privacySlug": "daily-weave"
   }
 ]

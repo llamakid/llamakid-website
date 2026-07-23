@@ -220,5 +220,58 @@
         "body": "If you have any questions about this Privacy Policy, please contact us at itsnateguy@gmail.com."
       }
     ]
+  },
+  {
+    "slug": "daily-weave",
+    "appName": "Daily Weave",
+    "lastUpdated": "2026-07-22",
+    "contactEmail": "itsnateguy@gmail.com",
+    "collectsData": false,
+    "sections": [
+      {
+        "heading": "The Short Version",
+        "body": "Daily Weave has no backend server. We do not collect, see, store, or have access to any of your habit data, personal information, or usage activity. Everything you enter into the App stays on your device and, if you choose to enable sync, in your own personal iCloud account — never on servers we operate or control."
+      },
+      {
+        "heading": "Information We Do Not Collect",
+        "body": "We do not collect: your name, email address, or any account information (the App has no sign-up or login of its own — it relies entirely on your device's existing Apple ID); analytics, usage tracking, or behavioral data; advertising identifiers (and we do not show ads); or payment and billing information (see \"Purchases and Subscriptions\" below). The App contains no analytics SDKs, advertising SDKs, or third-party tracking libraries of any kind."
+      },
+      {
+        "heading": "Your Habit Data",
+        "body": "Habits, schedules, and completion history you create in the App are stored locally on your device, always. If you're a Pro subscriber and have iCloud enabled on your device, they are also stored in your own private iCloud account. This uses Apple's CloudKit framework, which stores data in a private database tied to your personal Apple ID. We have no access to this data — it is stored and managed by Apple under your own iCloud account, the same way your Photos or Notes sync across your devices. If you use the Apple Watch companion app, the same data syncs to your Watch through this same private iCloud mechanism."
+      },
+      {
+        "heading": "Notifications",
+        "body": "Habit reminders are scheduled entirely through your device's local notification system. No reminder content or scheduling data is sent to us or any third party."
+      },
+      {
+        "heading": "Photos",
+        "body": "If you export your Stats \"tapestry\" as an image, the App requests permission to add that image to your Photo Library. The App cannot read, browse, or access your existing photos — this permission only allows saving the exported image."
+      },
+      {
+        "heading": "Purchases and Subscriptions",
+        "body": "Daily Weave offers optional Pro purchases (a monthly subscription or a one-time lifetime purchase) processed entirely through Apple's App Store. We do not collect or see your payment method, billing address, or any other payment details — this is handled exclusively by Apple in accordance with Apple's own privacy policy."
+      },
+      {
+        "heading": "Data Retention and Deletion",
+        "body": "Since your data lives locally on your device and in your own iCloud account rather than on any server we control, you are always in full control of it. Deleting a habit in the App deletes it from your device and, if sync is enabled, from your private iCloud database. Uninstalling the App removes all local data, and if sync is enabled you can also delete the data from your iCloud storage via your device's Settings. We have no copy of your data to retain or delete on our end, because we never had one."
+      },
+      {
+        "heading": "Children's Privacy",
+        "body": "Daily Weave is not directed at children under 13, and we do not knowingly collect personal information from anyone, regardless of age — since we do not collect personal information from any user in the first place."
+      },
+      {
+        "heading": "Third-Party Services",
+        "body": "The only third party involved in the App's operation is Apple Inc., through standard platform services (iCloud/CloudKit for sync, StoreKit for purchases, and push/local notification frameworks). We do not share, sell, or transmit any data to anyone — because we do not collect any to begin with."
+      },
+      {
+        "heading": "Changes to This Policy",
+        "body": "If this policy changes, we will update the effective date above and post the revised policy at this same location. Continued use of the App after a change constitutes acceptance of the updated policy."
+      },
+      {
+        "heading": "Contact Us",
+        "body": "If you have any questions about this Privacy Policy, please contact Nathan Guy at itsnateguy@gmail.com."
+      }
+    ]
   }
 ]

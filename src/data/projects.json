@@ -42,6 +42,13 @@
     "tags": ["macOS", "Swift", "Menubar App"]
   },
   {
+    "title": "Daily Weave",
+    "summary": "A calm habit tracker for iPhone and Apple Watch. Build streaks, watch them weave into a progress tapestry, and sync privately through your own iCloud. Built with SwiftUI.",
+    "image": "/assets/dailyWeaveIcon.png",
+    "link": "/apps/daily-weave",
+    "tags": ["iOS", "SwiftUI", "watchOS"]
+  },
+  {
     "title": "Preorder Perks",
     "summary": "React + Firebase marketplace for book preorder bonuses.",
     "image": "./assets/preorderperksScreenshot.png",
