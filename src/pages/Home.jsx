@@ -15,6 +15,33 @@ const stagger = {
   show: { transition: { staggerChildren: 0.1 } },
 }
 
+const phraseUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+}
+
+const phraseStagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.18 } },
+}
+
+const Statement = () => (
+  <motion.section
+    className="statement"
+    variants={phraseStagger}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.6 }}
+  >
+    <p>
+      <motion.span variants={phraseUp}>I design and build things people </motion.span>
+      <motion.span className="statement-accent statement-orange" variants={phraseUp}>actually want to use</motion.span>
+      <motion.span variants={phraseUp}> — simple, fast, and </motion.span>
+      <motion.span className="statement-accent statement-sky" variants={phraseUp}>made to last.</motion.span>
+    </p>
+  </motion.section>
+)
+
 const CardInner = ({ p }) => (
   <>
     <div className="thumb">
@@ -114,6 +141,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Statement />
 
       {/* About */}
       <motion.section

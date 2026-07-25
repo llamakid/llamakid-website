@@ -7,6 +7,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import AppPage from './pages/AppPage'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
+import SmoothScroll from './components/SmoothScroll'
+import { getLenis } from './lib/lenis'
 
 const Nav = () => {
   const location = useLocation()
@@ -36,7 +38,12 @@ function ScrollManager() {
       const el = document.getElementById(id)
       if (!el) return
       e.preventDefault()
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      const lenis = getLenis()
+      if (lenis) {
+        lenis.scrollTo(el, { offset: -64 })
+      } else {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
     }
     document.addEventListener('click', onClick)
     return () => document.removeEventListener('click', onClick)
@@ -47,6 +54,7 @@ function ScrollManager() {
 export function AppShell() {
   return (
     <MotionConfig reducedMotion="user">
+      <SmoothScroll />
       <ScrollManager />
       <Nav />
       <Routes>
