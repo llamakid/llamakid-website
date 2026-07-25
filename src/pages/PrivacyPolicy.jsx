@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
     title: `${policy.appName} Privacy Policy`,
     description: `Privacy policy for ${policy.appName}, last updated ${policy.lastUpdated}.`,
     path: `/privacy/${slug}`,
-  } : { title: 'Policy not found', path: `/privacy/${slug}` })
+  } : { title: 'Policy not found', path: `/privacy/${slug}`, noindex: true })
 
   if (!policy) {
     return (

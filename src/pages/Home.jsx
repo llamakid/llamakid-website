@@ -5,7 +5,9 @@ import { useHead, DEFAULT_DESCRIPTION } from '../lib/head'
 
 const CardInner = ({ p }) => (
   <>
-    <div className="thumb" style={{ backgroundImage: p.image ? `url(${p.image})` : 'none' }} />
+    <div className="thumb">
+      {p.image && <img src={p.image} alt={`${p.title} screenshot`} loading="lazy" />}
+    </div>
     <div className="card-body">
       <div className="card-header-row">
         <h3>{p.title}</h3>

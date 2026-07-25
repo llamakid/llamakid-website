@@ -108,12 +108,15 @@ function applyHead(template, head) {
   html = html.replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${head.description}" />`)
   html = html.replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${head.url}" />`)
   html = html.replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${head.image}" />`)
+  html = html.replace(/<meta property="og:type" content="[^"]*" \/>/, `<meta property="og:type" content="${head.type}" />`)
   html = html.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${head.url}" />`)
 
-  if (head.jsonLd) {
-    const script = `<script type="application/ld+json" id="page-jsonld">${escapeForScriptTag(JSON.stringify(head.jsonLd))}</script>\n    </head>`
-    html = html.replace('</head>', script)
-  }
+  const extraTags = []
+  if (head.publishedTime) extraTags.push(`<meta property="article:published_time" content="${head.publishedTime}" />`)
+  if (head.robots) extraTags.push(`<meta name="robots" content="${head.robots}" />`)
+  if (head.jsonLd) extraTags.push(`<script type="application/ld+json" id="page-jsonld">${escapeForScriptTag(JSON.stringify(head.jsonLd))}</script>`)
+  if (extraTags.length) html = html.replace('</head>', `${extraTags.join('\n    ')}\n    </head>`)
+
   return html
 }
 

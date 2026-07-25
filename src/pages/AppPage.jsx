@@ -32,7 +32,7 @@ export default function AppPage() {
       author: { '@type': 'Person', name: 'Nate Guy', url: SITE_URL },
       ...(app.appStoreUrl && !app.appStoreUrl.startsWith('REPLACE_') ? { installUrl: app.appStoreUrl } : {}),
     },
-  } : { title: 'App not found', path: `/apps/${slug}` })
+  } : { title: 'App not found', path: `/apps/${slug}`, noindex: true })
 
   if (!app) {
     return (

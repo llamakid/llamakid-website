@@ -12,6 +12,8 @@ export default function BlogPost() {
     title: post.title,
     description: post.summary,
     path: `/blog/${slug}`,
+    type: 'article',
+    publishedTime: post.date,
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
@@ -22,7 +24,7 @@ export default function BlogPost() {
       url: `${SITE_URL}/blog/${slug}`,
       author: { '@type': 'Person', name: 'Nate Guy', url: SITE_URL },
     },
-  } : { title: 'Post not found', path: `/blog/${slug}` })
+  } : { title: 'Post not found', path: `/blog/${slug}`, noindex: true })
 
   if (!post) {
     return (
