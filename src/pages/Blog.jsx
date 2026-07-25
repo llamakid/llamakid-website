@@ -1,8 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { posts, formatDate } from '../lib/posts'
+import { useHead } from '../lib/head'
 
 export default function Blog() {
+  useHead({
+    title: 'Blog',
+    description: 'Building things, writing about it — posts on AI tools, Claude Code, and building products.',
+    path: '/blog',
+  })
+
   return (
     <div className="blog-container">
       <Link to="/" className="back-link">← llamakid.com</Link>

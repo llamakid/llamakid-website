@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import projects from '../data/projects.json'
+import { useHead, DEFAULT_DESCRIPTION } from '../lib/head'
 
 const CardInner = ({ p }) => (
   <>
@@ -40,6 +41,8 @@ const ProjectCard = ({ p }) => {
 }
 
 export default function Home() {
+  useHead({ title: null, description: DEFAULT_DESCRIPTION, path: '/' })
+
   return (
     <main className="container">
       {/* Hero */}

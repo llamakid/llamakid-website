@@ -1,10 +1,38 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import apps from '../data/apps.json'
+import projects from '../data/projects.json'
+import { useHead, SITE_URL } from '../lib/head'
+
+function osFor(slug) {
+  const project = projects.find(p => p.link === `/apps/${slug}`)
+  const tags = project?.tags || []
+  if (tags.includes('macOS')) return 'macOS'
+  if (tags.includes('watchOS')) return 'iOS, watchOS'
+  return 'iOS'
+}
 
 export default function AppPage() {
   const { slug } = useParams()
   const app = apps.find(a => a.slug === slug)
+
+  useHead(app ? {
+    title: app.subtitle ? `${app.name} — ${app.subtitle}` : app.name,
+    description: app.tagline || app.description?.[0],
+    path: `/apps/${slug}`,
+    image: app.icon,
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: app.name,
+      description: app.tagline || app.description?.[0],
+      url: `${SITE_URL}/apps/${slug}`,
+      applicationCategory: 'GameApplication',
+      operatingSystem: osFor(slug),
+      author: { '@type': 'Person', name: 'Nate Guy', url: SITE_URL },
+      ...(app.appStoreUrl && !app.appStoreUrl.startsWith('REPLACE_') ? { installUrl: app.appStoreUrl } : {}),
+    },
+  } : { title: 'App not found', path: `/apps/${slug}` })
 
   if (!app) {
     return (

@@ -1,10 +1,17 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import policies from '../data/privacy.json'
+import { useHead } from '../lib/head'
 
 export default function PrivacyPolicy() {
   const { slug } = useParams()
   const policy = policies.find(p => p.slug === slug)
+
+  useHead(policy ? {
+    title: `${policy.appName} Privacy Policy`,
+    description: `Privacy policy for ${policy.appName}, last updated ${policy.lastUpdated}.`,
+    path: `/privacy/${slug}`,
+  } : { title: 'Policy not found', path: `/privacy/${slug}` })
 
   if (!policy) {
     return (
