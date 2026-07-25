@@ -1,13 +1,25 @@
-const LOGO_SVG_BASE64 =
-  'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NjAiIGhlaWdodD0iMTMwIiB2aWV3Qm94PSIwIDAgNDYwIDEzMCI+CiAgPHRleHQgeD0iNiIgeT0iOTgiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjkwIiBsZXR0ZXItc3BhY2luZz0iLTMiPgogICAgPHRzcGFuIGZpbGw9IiM0YTlhYjUiPmxsYW1hPC90c3Bhbj48dHNwYW4gZmlsbD0iI2UwNWMxYSI+a2lkPC90c3Bhbj4KICA8L3RleHQ+Cjwvc3ZnPgo='
-
 export function logConsoleArt() {
+  const banner = `
+%c██╗     ██╗      █████╗ ███╗   ███╗ █████╗ %c██╗  ██╗██╗██████╗
+%c██║     ██║     ██╔══██╗████╗ ████║██╔══██╗%c██║ ██╔╝██║██╔══██╗
+%c██║     ██║     ███████║██╔████╔██║███████║%c█████╔╝ ██║██║  ██║
+%c██║     ██║     ██╔══██║██║╚██╔╝██║██╔══██║%c██╔═██╗ ██║██║  ██║
+%c███████╗███████╗██║  ██║██║ ╚═╝ ██║██║  ██║%c██║  ██╗██║██████╔╝
+%c╚══════╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝%c╚═╝  ╚═╝╚═╝╚═════╝
+%c                                           %c                   `
+
+  const blue = 'color:#4a9ab5; font-family: monospace; font-weight: bold;'
+  const orange = 'color:#e05c1a; font-family: monospace; font-weight: bold;'
+
   console.log(
-    '%c ',
-    `font-size: 1px;
-     padding: 65px 230px;
-     background: url(data:image/svg+xml;base64,${LOGO_SVG_BASE64}) no-repeat;
-     background-size: contain;`
+    banner,
+    blue, orange,
+    blue, orange,
+    blue, orange,
+    blue, orange,
+    blue, orange,
+    blue, orange,
+    blue, orange
   )
   console.log(
     '%cLooking under the hood? Building something, hiring, or just curious — say hi: itsnateguy@gmail.com',
