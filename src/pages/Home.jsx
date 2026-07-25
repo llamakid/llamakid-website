@@ -59,7 +59,7 @@ const ProjectCard = ({ p }) => {
   )
 }
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 const ProductRow = ({ p }) => {
   const { hasLink, isInternal } = linkPropsFor(p)

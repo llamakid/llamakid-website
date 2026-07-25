@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
+import { motion } from 'framer-motion'
 import { posts, formatDate } from '../lib/posts'
 import { useHead, SITE_URL } from '../lib/head'
 
@@ -39,13 +40,19 @@ export default function BlogPost() {
   return (
     <div className="blog-container">
       <Link to="/blog" className="back-link">← Blog</Link>
-      <div className="blog-post-header">
-        <p className="blog-date">{formatDate(post.date)}</p>
-        <h1>{post.title}</h1>
-      </div>
-      <div className="blog-prose">
-        <ReactMarkdown>{post.content}</ReactMarkdown>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      >
+        <div className="blog-post-header">
+          <p className="blog-date">{formatDate(post.date)}</p>
+          <h1>{post.title}</h1>
+        </div>
+        <div className="blog-prose">
+          <ReactMarkdown>{post.content}</ReactMarkdown>
+        </div>
+      </motion.div>
     </div>
   )
 }

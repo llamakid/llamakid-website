@@ -1,37 +1,7 @@
 import React, { useMemo, useRef } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
-
-function WireframeShape({ pointerRef }) {
-  const groupRef = useRef()
-  const { size } = useThree()
-  const geometry = useMemo(() => new THREE.IcosahedronGeometry(1, 0), [])
-
-  useFrame((_, delta) => {
-    const g = groupRef.current
-    if (!g) return
-    const p = pointerRef.current
-    g.rotation.y += delta * 0.09 + p.x * 0.01
-    g.rotation.x += delta * 0.05 + p.y * 0.01
-  })
-
-  const posX = size.width * 0.3
-  const posY = size.height * 0.12
-  const scale = Math.min(size.width, size.height) * 0.55
-
-  return (
-    <group ref={groupRef} position={[posX, posY, 0]} scale={scale}>
-      <lineSegments>
-        <edgesGeometry args={[geometry]} />
-        <lineBasicMaterial color="#4a9ab5" transparent opacity={0.16} />
-      </lineSegments>
-      <lineSegments rotation={[0.2, 0.3, 0]} scale={1.03}>
-        <edgesGeometry args={[geometry]} />
-        <lineBasicMaterial color="#e05c1a" transparent opacity={0.09} />
-      </lineSegments>
-    </group>
-  )
-}
+import WireframeShape from './WireframeShape'
 
 function ParticleField({ pointerRef }) {
   const { size } = useThree()
