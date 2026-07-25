@@ -1,7 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import projects from '../data/projects.json'
 import { useHead, DEFAULT_DESCRIPTION } from '../lib/head'
+import HeroBackground from '../components/HeroBackground'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+}
+
+const stagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.1 } },
+}
 
 const CardInner = ({ p }) => (
   <>
@@ -21,9 +33,14 @@ const CardInner = ({ p }) => (
   </>
 )
 
-const ProjectCard = ({ p }) => {
+const linkPropsFor = (p) => {
   const hasLink = p.link && p.link !== '#'
   const isInternal = hasLink && p.link.startsWith('/')
+  return { hasLink, isInternal }
+}
+
+const ProjectCard = ({ p }) => {
+  const { hasLink, isInternal } = linkPropsFor(p)
 
   if (isInternal) {
     return <Link className="card" to={p.link}><CardInner p={p} /></Link>
@@ -42,25 +59,71 @@ const ProjectCard = ({ p }) => {
   )
 }
 
+const MotionLink = motion(Link)
+
+const ProductRow = ({ p }) => {
+  const { hasLink, isInternal } = linkPropsFor(p)
+  const Tag = isInternal ? MotionLink : motion.a
+  const tagProps = isInternal
+    ? { to: p.link }
+    : {
+        href: hasLink ? p.link : undefined,
+        target: hasLink ? '_blank' : undefined,
+        rel: 'noreferrer',
+        style: !hasLink ? { cursor: 'default', pointerEvents: 'none' } : {},
+      }
+
+  return (
+    <Tag className="product-row" variants={fadeUp} {...tagProps}>
+      <div className="product-row-media">
+        {p.image && <img src={p.image} alt={`${p.title} screenshot`} loading="lazy" />}
+      </div>
+      <div className="product-row-body">
+        <div className="card-header-row">
+          <h3>{p.title}</h3>
+          {p.year && <span className="card-year">{p.year}</span>}
+        </div>
+        <p>{p.summary}</p>
+        <div className="tags">
+          {p.tags?.map(t => <span key={t} className="tag">{t}</span>)}
+        </div>
+      </div>
+    </Tag>
+  )
+}
+
 export default function Home() {
   useHead({ title: null, description: DEFAULT_DESCRIPTION, path: '/' })
+
+  const products = projects.filter(p => p.type === 'product')
+  const clientWork = projects.filter(p => p.type === 'client')
 
   return (
     <main className="container">
       {/* Hero */}
       <section className="hero" id="top">
-        <h1 className="hero-name"><span className="name-first">Nate</span> <span className="name-last">Guy</span></h1>
-        <p className="hero-tagline">
-          Developer &amp; designer building web and iOS products for 14+ years.
-        </p>
-        <div className="hero-actions">
-          <a href="#work" className="btn btn-primary">View Work</a>
-          <a href="#contact" className="btn btn-ghost">Get in Touch</a>
+        <HeroBackground />
+        <div className="hero-content">
+          <h1 className="hero-name"><span className="name-first">Nate</span> <span className="name-last">Guy</span></h1>
+          <p className="hero-tagline">
+            Developer &amp; designer building web and iOS products for 14+ years.
+          </p>
+          <div className="hero-actions">
+            <a href="#work" className="btn btn-primary">View Work</a>
+            <a href="#contact" className="btn btn-ghost">Get in Touch</a>
+          </div>
         </div>
       </section>
 
       {/* About */}
-      <section id="about" className="section">
+      <motion.section
+        id="about"
+        className="section"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <h2>About</h2>
         <div className="about-wrap">
           <div className="about-text">
@@ -80,19 +143,56 @@ export default function Home() {
             />
           </figure>
         </div>
-      </section>
+      </motion.section>
 
       {/* Work */}
-      <section id="work" className="section">
+      <motion.section
+        id="work"
+        className="section"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         <h2>Selected Work</h2>
-        <p className="section-sub">A mix of client work, side projects, and experiments.</p>
-        <div className="grid">
-          {projects.map(p => <ProjectCard key={p.title} p={p} />)}
-        </div>
-      </section>
+        <p className="section-sub">Products I've built and shipped, plus client &amp; agency work.</p>
+
+        <h3 className="work-subheading">Products</h3>
+        <motion.div
+          className="product-rows"
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {products.map(p => <ProductRow key={p.title} p={p} />)}
+        </motion.div>
+
+        <h3 className="work-subheading">Client &amp; Agency Work</h3>
+        <motion.div
+          className="grid"
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {clientWork.map(p => (
+            <motion.div key={p.title} variants={fadeUp}>
+              <ProjectCard p={p} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.section>
 
       {/* Contact */}
-      <section id="contact" className="section">
+      <motion.section
+        id="contact"
+        className="section"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <h2>Get in Touch</h2>
         <p className="section-sub">Have a project, role, or collaboration in mind?</p>
         <div className="contact-links">
@@ -109,7 +209,7 @@ export default function Home() {
             GitHub
           </a>
         </div>
-      </section>
+      </motion.section>
 
       <footer className="footer">
         <span>© {new Date().getFullYear()} Nate Guy</span>

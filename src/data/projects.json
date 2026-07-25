@@ -4,91 +4,162 @@
     "summary": "A school for everyday people who actually want to use AI. No jargon, no tech background, no overwhelm. Practical lessons plus custom AI tools that do it for you.",
     "image": "./assets/clearlyAIScreenshot.png",
     "link": "https://learnaiclearly.com",
-    "tags": ["AI", "Education", "Product"]
+    "tags": [
+      "AI",
+      "Education",
+      "Product"
+    ],
+    "type": "product"
   },
   {
     "title": "Clearly: Explain This",
     "summary": "Custom GPT that turns confusing information into clear, plain-English explanations without jargon, assumptions, or judgment.",
     "image": "./assets/clearlyExplainThisScreenshot.png",
     "link": "https://chatgpt.com/g/g-6a25ce026df08191ad2ae0fedd361400-clearly-explain-this",
-    "tags": ["AI", "GPT", "ChatGPT"]
+    "tags": [
+      "AI",
+      "GPT",
+      "ChatGPT"
+    ],
+    "type": "product"
   },
   {
     "title": "XO Fun - Tic Tac Toe",
     "summary": "A clean, fast, family-friendly iOS take on classic Tic Tac Toe. Built with SwiftUI, live on the App Store.",
     "image": "./assets/mid-game.png",
     "link": "/apps/xo-fun",
-    "tags": ["iOS", "SwiftUI", "Game"]
+    "tags": [
+      "iOS",
+      "SwiftUI",
+      "Game"
+    ],
+    "type": "product"
   },
   {
     "title": "Hang On!",
     "summary": "A clean, fast, family-friendly iOS take on classic Hangman. Built with SwiftUI, live on the App Store.",
     "image": "./assets/hangmanIcon.png",
     "link": "/apps/hang-on",
-    "tags": ["iOS", "SwiftUI", "Game"]
+    "tags": [
+      "iOS",
+      "SwiftUI",
+      "Game"
+    ],
+    "type": "product"
   },
   {
     "title": "Four Up Duel",
     "summary": "A clean, fast, family-friendly iOS take on classic Connect Four. Play a friend or duel the AI. Built with SwiftUI.",
     "image": "/assets/fourUpDuelIcon.png",
     "link": "/apps/four-up-duel",
-    "tags": ["iOS", "SwiftUI", "Game"]
+    "tags": [
+      "iOS",
+      "SwiftUI",
+      "Game"
+    ],
+    "type": "product"
   },
   {
     "title": "BurnWatch",
     "summary": "A native macOS menubar app that shows developers exactly how fast they're burning tokens across Claude Code and Codex, reading local transcripts with zero network requests.",
     "image": "/assets/burnwatchIcon.png",
     "link": "/apps/burnwatch",
-    "tags": ["macOS", "Swift", "Menubar App"]
+    "tags": [
+      "macOS",
+      "Swift",
+      "Menubar App"
+    ],
+    "type": "product"
   },
   {
     "title": "Daily Weave",
     "summary": "A calm habit tracker for iPhone and Apple Watch. Build streaks, watch them weave into a progress tapestry, and sync privately through your own iCloud. Built with SwiftUI.",
     "image": "/assets/dailyWeaveIcon.png",
     "link": "/apps/daily-weave",
-    "tags": ["iOS", "SwiftUI", "watchOS"]
+    "tags": [
+      "iOS",
+      "SwiftUI",
+      "watchOS"
+    ],
+    "type": "product"
   },
   {
     "title": "Preorder Perks",
     "summary": "React + Firebase marketplace for book preorder bonuses.",
     "image": "./assets/preorderperksScreenshot.png",
     "link": "https://preorderperks.com",
-    "tags": ["React", "Firebase", "UI"]
+    "tags": [
+      "React",
+      "Firebase",
+      "UI"
+    ],
+    "type": "client"
   },
   {
     "title": "Molecule Hub",
     "summary": "Pharma molecules & trials portal with JSON-driven content. Built to be displayed at conferences & trade show events.",
     "image": "./assets/mhubScreenshot.png",
     "link": "#",
-    "tags": ["React", "UX", "Data"]
+    "tags": [
+      "React",
+      "UX",
+      "Data"
+    ],
+    "type": "client"
   },
   {
     "title": "LeadKey AI",
     "summary": "AI services & agents for lead capture and follow-up.",
     "image": "./assets/leadkeyScreenshot.png",
     "link": "https://getleadkey.com",
-    "tags": ["AI", "Automation", "React"]
+    "tags": [
+      "AI",
+      "Automation",
+      "React"
+    ],
+    "type": "client"
   },
   {
     "title": "Dentistry On Purpose",
     "summary": "Informational site for a dental practice, including service pages, contact forms, and a login component.",
     "image": "./assets/dopScreenshot.png",
     "link": "https://www.dentistryonpurpose.com",
-    "tags": ["HTML", "CSS", "PHP", "JavaScript", "Bootstrap"]
+    "tags": [
+      "HTML",
+      "CSS",
+      "PHP",
+      "JavaScript",
+      "Bootstrap"
+    ],
+    "type": "client"
   },
   {
     "title": "TEC K9 Rubber Tracks",
     "summary": "Former Ecommerce site for Tractor & Equipment Company. Built to help sell rubber tracks and parts online for construction and agricultural equipment.",
     "image": "./assets/k9Screenshot.png",
     "link": "#",
-    "tags": ["ecommerce", "HTML/CSS", "JavaScript", "Stripe Integration", "PHP"]
+    "tags": [
+      "ecommerce",
+      "HTML/CSS",
+      "JavaScript",
+      "Stripe Integration",
+      "PHP"
+    ],
+    "type": "client"
   },
   {
     "title": "Atlantic Bay Mortgage Group",
     "summary": "Mortgage Calculators for the ABMG website. As well as individulat Mortgage Banker's websites.",
     "image": "./assets/abmgScreenshot.png",
     "link": "https://atlanticbat.com",
-    "tags": ["JavaScript", "PHP", "Wordpress", "Bootstrap", "HTML", "CSS"]
+    "tags": [
+      "JavaScript",
+      "PHP",
+      "Wordpress",
+      "Bootstrap",
+      "HTML",
+      "CSS"
+    ],
+    "type": "client"
   }
-   
 ]

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
+import { MotionConfig } from 'framer-motion'
 import Home from './pages/Home'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import AppPage from './pages/AppPage'
@@ -45,7 +46,7 @@ function ScrollManager() {
 
 export function AppShell() {
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <ScrollManager />
       <Nav />
       <Routes>
@@ -55,7 +56,7 @@ export function AppShell() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
-    </>
+    </MotionConfig>
   )
 }
 

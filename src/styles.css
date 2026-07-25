@@ -12,6 +12,7 @@
   --sky-dim: #edf6fa;
   --sky-text: #4a9ab5; /* sky deepened for legible text */
   --radius: 8px;
+  --font-display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 
 /* ── Reset ── */
@@ -45,7 +46,8 @@ body {
 }
 
 .logo {
-  font-size: 16px;
+  font-family: var(--font-display);
+  font-size: 17px;
   font-weight: 700;
   text-decoration: none;
   letter-spacing: -0.2px;
@@ -82,12 +84,30 @@ body {
 
 /* ── Hero ── */
 .hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
   padding: 88px 0 72px;
   border-bottom: 1px solid var(--border);
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-name {
-  font-size: clamp(44px, 6vw, 72px);
+  font-family: var(--font-display);
+  font-size: clamp(44px, 6vw, 76px);
   font-weight: 800;
   letter-spacing: -2.5px;
   line-height: 1;
@@ -152,7 +172,8 @@ body {
 }
 
 .section h2 {
-  font-size: 22px;
+  font-family: var(--font-display);
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.3px;
   color: var(--fg);
@@ -163,6 +184,20 @@ body {
   font-size: 14px;
   color: var(--muted);
   margin: 0 0 28px;
+}
+
+.work-subheading {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 40px 0 18px;
+}
+
+.work-subheading:first-of-type {
+  margin-top: 0;
 }
 
 /* ── About ── */
@@ -198,6 +233,93 @@ body {
   object-fit: cover;
   object-position: center 20%;
   border: 1px solid var(--border);
+}
+
+/* ── Product Rows (case-study style) ── */
+.product-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.product-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  padding: 28px;
+  background: var(--bg);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+
+.product-row:nth-child(even) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+}
+
+.product-row:nth-child(even) .product-row-media {
+  order: 2;
+}
+
+.product-row:hover {
+  background: var(--bg-soft);
+}
+
+.product-row:hover .product-row-body h3 {
+  color: var(--orange);
+}
+
+.product-row-media {
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+}
+
+.product-row-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.product-row:hover .product-row-media img {
+  transform: scale(1.04);
+}
+
+.product-row-body h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--fg);
+  transition: color 0.12s;
+}
+
+.product-row-body p {
+  margin: 10px 0 12px;
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .product-row,
+  .product-row:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+  .product-row:nth-child(even) .product-row-media {
+    order: 0;
+  }
 }
 
 /* ── Project Grid ── */
@@ -739,7 +861,7 @@ body {
 @media (max-width: 700px) {
   .nav { padding: 0 20px; }
 
-  .hero { padding: 56px 0 48px; }
+  .hero { padding: 56px 0 48px; min-height: 70vh; }
   .hero-name { letter-spacing: -1.5px; }
 
   .about-wrap {
