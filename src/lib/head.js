@@ -5,6 +5,22 @@ export const DEFAULT_TITLE = 'Nate Guy — Portfolio'
 export const DEFAULT_DESCRIPTION = 'Nate Guy — developer & designer. React, web, iOS, AI automation.'
 export const DEFAULT_IMAGE = `${SITE_URL}/assets/nateHeader.jpg`
 
+export function computeHeadValues({ title, description, path = '/', image, jsonLd } = {}) {
+  const fullTitle = title ? `${title} — llamakid.com` : DEFAULT_TITLE
+  const desc = description || DEFAULT_DESCRIPTION
+  const url = `${SITE_URL}${path}`
+  const imageUrl = image ? (image.startsWith('http') ? image : `${SITE_URL}${image}`) : DEFAULT_IMAGE
+  return { title: fullTitle, description: desc, url, image: imageUrl, jsonLd: jsonLd || null }
+}
+
+// Set synchronously during render (see useHead below) so the build-time SSR
+// pass can read it right after renderToStaticMarkup finishes, with no need
+// to duplicate per-page head logic in the prerender script.
+let lastHead = null
+export function getLastHead() {
+  return lastHead
+}
+
 function setMetaTag(attr, key, content) {
   if (!content) return
   let el = document.head.querySelector(`meta[${attr}="${key}"]`)
@@ -44,25 +60,24 @@ function setJsonLd(data) {
 
 /**
  * Sets document title, meta description, canonical/OG tags, and an optional
- * page-specific JSON-LD block. Runs client-side, and is captured by the
- * build-time prerender script so crawlers see the real values in the HTML.
+ * page-specific JSON-LD block. The DOM writes happen client-side via effect;
+ * the build-time prerender script instead reads getLastHead() right after
+ * server-rendering the page, since effects don't run during SSR.
  */
-export function useHead({ title, description, path = '/', image, jsonLd } = {}) {
-  useEffect(() => {
-    const fullTitle = title ? `${title} — llamakid.com` : DEFAULT_TITLE
-    const desc = description || DEFAULT_DESCRIPTION
-    const url = `${SITE_URL}${path}`
-    const imageUrl = image ? (image.startsWith('http') ? image : `${SITE_URL}${image}`) : DEFAULT_IMAGE
+export function useHead(opts = {}) {
+  const values = computeHeadValues(opts)
+  lastHead = values
 
-    document.title = fullTitle
-    setMetaTag('name', 'description', desc)
+  useEffect(() => {
+    document.title = values.title
+    setMetaTag('name', 'description', values.description)
     setMetaTag('property', 'og:type', 'website')
-    setMetaTag('property', 'og:title', fullTitle)
-    setMetaTag('property', 'og:description', desc)
-    setMetaTag('property', 'og:url', url)
-    setMetaTag('property', 'og:image', imageUrl)
+    setMetaTag('property', 'og:title', values.title)
+    setMetaTag('property', 'og:description', values.description)
+    setMetaTag('property', 'og:url', values.url)
+    setMetaTag('property', 'og:image', values.image)
     setMetaTag('name', 'twitter:card', 'summary_large_image')
-    setCanonical(url)
-    setJsonLd(jsonLd)
-  }, [title, description, path, image, jsonLd])
+    setCanonical(values.url)
+    setJsonLd(values.jsonLd)
+  })
 }

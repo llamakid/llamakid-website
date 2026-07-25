@@ -43,9 +43,9 @@ function ScrollManager() {
   return null
 }
 
-export default function App() {
+export function AppShell() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollManager />
       <Nav />
       <Routes>
@@ -55,6 +55,14 @@ export default function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
+    </>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppShell />
       <Analytics />
     </BrowserRouter>
   )

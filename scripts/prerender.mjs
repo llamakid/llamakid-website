@@ -1,8 +1,7 @@
-// Post-build step: renders every route to real static HTML using a headless
-// browser, so crawlers that don't execute JavaScript (most AI/answer-engine
-// bots) see actual page content instead of an empty <div id="root">.
-import { chromium } from 'playwright-chromium'
-import http from 'node:http'
+// Post-build step: renders every route to real static HTML using React's
+// server renderer (pure Node, no browser), so crawlers that don't execute
+// JavaScript (most AI/answer-engine bots) see actual page content instead
+// of an empty <div id="root">.
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -11,14 +10,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const rootDir = path.join(__dirname, '..')
 const distDir = path.join(rootDir, 'dist')
 const SITE_URL = 'https://llamakid.com'
-const PORT = 4173 + Math.floor(Math.random() * 500)
-
-const MIME = {
-  '.html': 'text/html', '.js': 'application/javascript', '.mjs': 'application/javascript',
-  '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg',
-  '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.ico': 'image/x-icon',
-  '.xml': 'application/xml', '.txt': 'text/plain', '.webp': 'image/webp',
-}
 
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/)
@@ -61,27 +52,6 @@ function collectContent() {
   return { routes, posts, apps }
 }
 
-function createStaticServer(root) {
-  return http.createServer((req, res) => {
-    const urlPath = decodeURIComponent(req.url.split('?')[0])
-    const tryFiles = [
-      path.join(root, urlPath),
-      path.join(root, urlPath, 'index.html'),
-    ]
-    const match = tryFiles.find(f => fs.existsSync(f) && fs.statSync(f).isFile())
-    const filePath = match || path.join(root, 'index.html') // SPA fallback
-    fs.readFile(filePath, (err, data) => {
-      if (err) {
-        res.statusCode = 404
-        res.end('Not found')
-        return
-      }
-      res.setHeader('Content-Type', MIME[path.extname(filePath)] || 'application/octet-stream')
-      res.end(data)
-    })
-  })
-}
-
 function writeSitemap(routes) {
   const urls = routes.map(r => {
     const loc = `${SITE_URL}${r.path}`
@@ -122,22 +92,42 @@ function writeLlmsTxt(posts, apps) {
   fs.writeFileSync(path.join(distDir, 'llms.txt'), lines.join('\n'))
 }
 
+function escapeForScriptTag(json) {
+  return json.replace(/</g, '\\u003c')
+}
+
+function applyHead(template, head) {
+  if (!head) return template
+  let html = template
+  html = html.replace(/<title>.*?<\/title>/, `<title>${head.title}</title>`)
+  html = html.replace(
+    /<meta name="description" content="[^"]*"\/>/,
+    `<meta name="description" content="${head.description}"/>`
+  )
+  html = html.replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${head.title}" />`)
+  html = html.replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${head.description}" />`)
+  html = html.replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${head.url}" />`)
+  html = html.replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${head.image}" />`)
+  html = html.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${head.url}" />`)
+
+  if (head.jsonLd) {
+    const script = `<script type="application/ld+json" id="page-jsonld">${escapeForScriptTag(JSON.stringify(head.jsonLd))}</script>\n    </head>`
+    html = html.replace('</head>', script)
+  }
+  return html
+}
+
 async function main() {
   const { routes, posts, apps } = collectContent()
   writeSitemap(routes)
   writeLlmsTxt(posts, apps)
 
-  const server = createStaticServer(distDir)
-  await new Promise(resolve => server.listen(PORT, resolve))
-
-  const browser = await chromium.launch()
-  const page = await browser.newPage()
+  const { render } = await import(path.join(rootDir, 'dist-server/entry-server.js'))
+  const template = fs.readFileSync(path.join(distDir, 'index.html'), 'utf8')
 
   for (const route of routes) {
-    const url = `http://localhost:${PORT}${route.path}`
-    await page.goto(url, { waitUntil: 'networkidle' })
-    await page.waitForSelector('#root h1', { timeout: 10000 })
-    const html = await page.content()
+    const { body, head } = render(route.path)
+    const html = applyHead(template.replace('<div id="root"></div>', `<div id="root">${body}</div>`), head)
 
     const outDir = route.path === '/' ? distDir : path.join(distDir, route.path)
     fs.mkdirSync(outDir, { recursive: true })
@@ -145,8 +135,7 @@ async function main() {
     console.log(`prerendered ${route.path}`)
   }
 
-  await browser.close()
-  server.close()
+  fs.rmSync(path.join(rootDir, 'dist-server'), { recursive: true, force: true })
 }
 
 main().catch(err => {
