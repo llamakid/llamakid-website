@@ -34,10 +34,10 @@ const Statement = () => (
     viewport={{ once: true, amount: 0.6 }}
   >
     <p>
-      <motion.span variants={phraseUp}>I design and build things people </motion.span>
-      <motion.span className="statement-accent statement-orange" variants={phraseUp}>actually want to use</motion.span>
-      <motion.span variants={phraseUp}> — simple, fast, and </motion.span>
-      <motion.span className="statement-accent statement-sky" variants={phraseUp}>made to last.</motion.span>
+      <motion.span variants={phraseUp}>I solve real problems with software — </motion.span>
+      <motion.span className="statement-accent statement-orange" variants={phraseUp}>no hype</motion.span>
+      <motion.span variants={phraseUp}>, just </motion.span>
+      <motion.span className="statement-accent statement-sky" variants={phraseUp}>things that work.</motion.span>
     </p>
   </motion.section>
 )
